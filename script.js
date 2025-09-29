@@ -27,7 +27,7 @@ class DealTamWebsite {
                 'nav.contact': 'Contact',
 
                 // Hero Section
-                'hero.title': 'Building Bridges, Delivering Trust',
+                'hero.title': 'Built on Trust . Driven by Trade',
                 'hero.subtitle': 'Your Story in Global Trade Begins Here',
                 'hero.description': 'In the complex tapestry of international commerce, every business has a unique story waiting to be told. Yet between the lines of contracts, logistics, and cultural divides, many promising chapters remain unwritten.',
                 'hero.description2': 'At DealTam, we believe your success story shouldn\'t be hindered by borders or bureaucracy. We are the narrators who help you write your next chapter - one of growth, opportunity, and seamless connection between Turkish excellence and global markets.',
@@ -142,7 +142,7 @@ class DealTamWebsite {
                 'nav.contact': 'اتصل بنا',
 
                 // Hero Section
-                'hero.title': 'نبني الجسور، نقدم الثقة',
+                'hero.title': ' شراكات موثوقة ، تجارة بلا حدود',
                 'hero.subtitle': 'قصتك في التجارة العالمية تبدأ من هنا',
                 'hero.description': 'في نسيج التجارة الدولية المعقد، كل شركة لديها قصة فريدة تنتظر أن تُحكى. ولكن بين سطور العقود واللوجستيات والفوارق الثقافية، تبقى فصول واعدة كثيرة غير مكتوبة.',
                 'hero.description2': 'في ديل تم، نؤمن أن قصة نجاحك لا ينبغي أن تعيقها الحدود أو البيروقراطية. نحن الرواة الذين يساعدونك في كتابة فصل قادم - فصل من النمو والفرص والاتصال السلس بين التميز التركي والأسواق العالمية.',
@@ -257,7 +257,7 @@ class DealTamWebsite {
                 'nav.contact': 'İletişim',
 
                 // Hero Section
-                'hero.title': 'Köprüler Kuruyor, Güven Teslim Ediyoruz',
+                'hero.title': 'Güven Temelimiz . Ticaret Yolumuz',
                 'hero.subtitle': 'Küresel Ticarette Hikayeniz Burada Başlıyor',
                 'hero.description': 'Karmaşık uluslararası ticaret dokusunda, her işletmenin anlatılmayı bekleyen benzersiz bir hikayesi var. Ancak sözleşmeler, lojistik ve kültürel farklılıklar arasında, birçok umut verici bölüm yazılmadan kalıyor.',
                 'hero.description2': 'DealTam olarak, başarı hikayenizin sınırlar veya bürokrasi tarafından engellenmemesi gerektiğine inanıyoruz. Bir sonraki bölümünüzü -büyüme, fırsat ve Türkiye mükemmelliği ile küresel pazarlar arasında sorunsuz bağlantıdan oluşan- yazmanıza yardımcı olan anlatıcılarız.',
