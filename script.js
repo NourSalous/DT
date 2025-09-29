@@ -377,7 +377,7 @@ class DealTamWebsite {
         // Mobile menu toggle
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('nav-menu');
-        
+
         hamburger.addEventListener('click', () => {
             navMenu.classList.toggle('active');
             hamburger.classList.toggle('active');
@@ -432,7 +432,7 @@ class DealTamWebsite {
                 e.preventDefault();
                 const targetId = link.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
-                
+
                 if (targetElement) {
                     const offsetTop = targetElement.offsetTop - 80; // Account for fixed navbar
                     window.scrollTo({
@@ -448,16 +448,34 @@ class DealTamWebsite {
         const form = document.querySelector('.form');
         if (form) {
             form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                this.handleFormSubmission(form);
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+
+                // Show loading state
+                submitBtn.innerHTML = '<span class="loading"></span> Sending...';
+                submitBtn.disabled = true;
+
+                // Wait for Google Forms submission
+                setTimeout(() => {
+                    form.reset();
+                    submitBtn.textContent = 'Message Sent!';
+                    submitBtn.style.background = '#10b981';
+
+                    setTimeout(() => {
+                        submitBtn.textContent = originalText;
+                        submitBtn.style.background = '';
+                        submitBtn.disabled = false;
+                    }, 3000);
+                }, 2000);
             });
         }
     }
 
+
     handleFormSubmission(form) {
         const submitBtn = form.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
-        
+
         // Show loading state
         submitBtn.innerHTML = '<span class="loading"></span> Sending...';
         submitBtn.disabled = true;
@@ -466,11 +484,11 @@ class DealTamWebsite {
         setTimeout(() => {
             // Reset form
             form.reset();
-            
+
             // Show success message
             submitBtn.textContent = 'Message Sent!';
             submitBtn.style.background = '#10b981';
-            
+
             setTimeout(() => {
                 submitBtn.textContent = originalText;
                 submitBtn.style.background = '';
@@ -481,13 +499,13 @@ class DealTamWebsite {
 
     changeLanguage(lang) {
         this.currentLanguage = lang;
-        
+
         // Update dropdown selection
         const langDropdown = document.getElementById('lang-dropdown');
         if (langDropdown) {
             langDropdown.value = lang;
         }
-        
+
         // Update document direction for Arabic
         if (lang === 'ar') {
             document.documentElement.setAttribute('dir', 'rtl');
@@ -496,10 +514,10 @@ class DealTamWebsite {
             document.documentElement.setAttribute('dir', 'ltr');
             document.documentElement.setAttribute('lang', lang);
         }
-        
+
         // Update all translatable elements
         this.updateTranslations();
-        
+
         // Save language preference
         localStorage.setItem('dealtam-language', lang);
     }
@@ -509,7 +527,7 @@ class DealTamWebsite {
         elements.forEach(element => {
             const key = element.dataset.key;
             const translation = this.translations[this.currentLanguage][key];
-            
+
             if (translation) {
                 if (element.tagName === 'INPUT' && element.type === 'text') {
                     element.placeholder = translation;
@@ -546,7 +564,7 @@ document.addEventListener('DOMContentLoaded', () => {
         card.addEventListener('mouseenter', () => {
             card.style.transform = 'translateY(-10px) scale(1.02)';
         });
-        
+
         card.addEventListener('mouseleave', () => {
             card.style.transform = 'translateY(0) scale(1)';
         });
